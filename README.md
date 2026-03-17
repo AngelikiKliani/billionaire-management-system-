@@ -63,19 +63,15 @@ Terminal/Command Prompt
 Installation
 Clone the repository:
 
-bash
 git clone https://github.com/yourusername/billionaire-management-system.git
 Navigate to the project directory:
 
-bash
 cd billionaire-management-system
 Compile the program:
 
-bash
 gcc -o billionaire_manager KlianiTsouko.c
 Run the program:
 
-bash
 ./billionaire_manager
 
 # Usage Examples
