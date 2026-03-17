@@ -1,13 +1,4 @@
-/*
-Aggeliki Kliani
-AM 2022202300205
-dit23205@go.uop.gr
 
-Christianna Tsouko
-AM 2022202300014
-dit23014@go.uop.gr
-
-*/
 
 #include <stdio.h>
 #include <stdlib.h>
