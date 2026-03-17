@@ -112,13 +112,24 @@ Data is stored in plain text format using semicolons as delimiters:
 Name;Location;Source;BirthCountry;Gender;DD/MM/YYYY;HH:MM;Money
 Elon Musk;USA;Tesla/SpaceX;South Africa;Male;28/06/1971;12:15;245.60
 
-# Compilation
-bash
 # Standard compilation
-gcc -o billionaire_manager KlianiTsouko.c
+gcc -o billionaire_manager Billionair-management-system.c
 
 # With debugging symbols
-gcc -g -o billionaire_manager KlianiTsouko.c
+gcc -g -o billionaire_manager Billionair-management-system.c
 
 # With all warnings
-gcc -Wall -Wextra -o billionaire_manager KlianiTsouko.c
+gcc -Wall -Wextra -o billionaire_manager Billionair-management-system.c
+
+# With optimization
+gcc -O2 -o billionaire_manager Billionair-management-system.c
+
+# Complete with all flags
+gcc -Wall -Wextra -O2 -g -o billionaire_manager Billionair-management-system.c
+
+# Run the program:
+**Linux/Mac**
+./billionaire_manager
+
+**Windows**
+billionaire_manager.exe
