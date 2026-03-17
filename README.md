@@ -1,33 +1,18 @@
 # billionaire-management-system-
 A C program implementing a doubly circular linked list to manage billionaire records with automatic bill code generation and file persistence.
 
-**Table of Contents**
-Features
-Data Structure
-Commands
-Getting Started
-Usage Examples
-Bill Code Generation
-File Format
-Compilation
 
+#  Features
 
-**Features**
 Create new billionaire records with name, location, source of income, birth country, gender, birth date/time, and net worth
-
 Automatic bill code generation - 11-digit validation code using Luhn algorithm
-
 Doubly circular linked list implementation for efficient traversal in both directions
-
 File operations - Save to and load from text files
-
 Delete operations - Remove newest or oldest entries
-
 Sum calculation - Total wealth of all billionaires
-
 Dynamic memory management - Proper allocation and deallocation
 
-**Data Structure**
+# Data Structure
 typedef struct {
     int year;
     int month;
@@ -53,18 +38,23 @@ typedef struct bilList {
     struct bilList *prev;         // Pointer to previous node
 } billionaire;
 
-
-**Commands**
+# Commands
 Command	Format	Description
-newbil	newbil Name Surname;City/Country;Source;Birth Country;Gender;DD/MM/YYYY HH:MM;Billions;	Create new billionaire entry
-sum	sum	Display total wealth of all billionaires
-deleteN	deleteN	Remove the most recently added billionaire
-deleteO	deleteO	Remove the oldest billionaire
-save	save filename.txt	Save all records to file
-load	load N filename.txt	Load N billionaires from file
-exit	exit	Exit program (frees memory)
+**newbil**	newbil Name Surname;City/Country;Source;Birth Country;Gender;DD/MM/YYYY HH:MM;Billions;	Create new billionaire entry
 
-**Getting Started**
+**sum**	sum	Display total wealth of all billionaires
+
+**deleteN**	deleteN	Remove the most recently added billionaire
+
+**deleteO**	deleteO	Remove the oldest billionaire
+
+**save**	save filename.txt	Save all records to file
+
+**load**	load N filename.txt	Load N billionaires from file
+
+**exit**	exit	Exit program (frees memory)
+
+# Getting Started
 Prerequisites
 GCC compiler
 
@@ -88,43 +78,41 @@ Run the program:
 bash
 ./billionaire_manager
 
-**Usage Examples**
-Creating a new billionaire
-text
+# Usage Examples
+**Creating a new billionaire**
 $> newbil Elon Musk;USA;Tesla/SpaceX;South Africa;Male;28/06/1971 12:15;245.6;
 Generated bill code: 47285936105
-Viewing total wealth
-text
+
+**Viewing total wealth**
 $> sum
 Total money of all billionaires: 245.60 billions
-Saving to file
-text
+
+**Saving to file**
 $> save billionaires.txt
 Billionaires saved to billionaires.txt
-Loading from file
-text
+
+**Loading from file**
 $> load 5 billionaires.txt
 Billionaires loaded from billionaires.txt
 
-**Bill Code Generation**
+# Bill Code Generation
 The system automatically generates an 11-digit validation code for each billionaire using a modified Luhn algorithm:
 
-First 10 digits: Random numbers with odd-position digits doubled
+**First 10 digits:** Random numbers with odd-position digits doubled
 
-11th digit: Checksum calculated from the sum of first 10 digits
+**11th digit:** Checksum calculated from the sum of first 10 digits
 
-Validation: The code follows credit card number validation principles
+**Validation:** The code follows credit card number validation principles
 
-Example output: 47285936105
+**Example output:** 47285936105
 
-**File Format**
+# File Format
 Data is stored in plain text format using semicolons as delimiters:
 
-text
 Name;Location;Source;BirthCountry;Gender;DD/MM/YYYY;HH:MM;Money
 Elon Musk;USA;Tesla/SpaceX;South Africa;Male;28/06/1971;12:15;245.60
 
-**Compilation**
+# Compilation
 bash
 # Standard compilation
 gcc -o billionaire_manager KlianiTsouko.c
