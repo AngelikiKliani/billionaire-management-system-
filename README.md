@@ -1,14 +1,6 @@
 # billionaire-management-system-
 A C program implementing a doubly circular linked list to manage billionaire records with automatic bill code generation and file persistence.
 
-README
-Billionaire Management System
-A C program that implements a doubly circular linked list to manage billionaire records with automatic bill code generation and file persistence.
-
-Authors
-Aggeliki Kliani (AM: 2022202300205, dit23205@go.uop.gr)
-
-Christianna Tsouko (AM: 2022202300014, dit23014@go.uop.gr)
 
 Features
 Create new billionaire records with name, location, source of income, birth country, gender, birth date/time, and net worth
